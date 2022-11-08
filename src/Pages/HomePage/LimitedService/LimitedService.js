@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import LimitedServiceCard from './LimitedServiceCard';
 
 const LimitedService = () => {
@@ -20,7 +21,7 @@ const LimitedService = () => {
                 }
             </div>
             <div className='my-4 text-center'>
-                <button className='btn btn-outline btn-primary'>more services</button>
+                <Link to='/services'><button className='btn btn-outline btn-primary'>more services</button></Link>
             </div>
         </div>
     );
