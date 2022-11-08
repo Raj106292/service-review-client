@@ -27,7 +27,7 @@ const MyReviews = () => {
     }, [user?.email]);
 
     const handleDelete = (id) => {
-        const proceed = window.confirm('Are you sure to cancel the order');
+        const proceed = window.confirm('Are you sure to remove the review');
         if (proceed) {
             fetch(`http://localhost:5000/reviews/${id}`, {
                 method: 'DELETE',
@@ -37,11 +37,10 @@ const MyReviews = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if (data.deletedCount > 0) {
                         const existsReviews = reviews.filter(review => review._id !== id);
                         setReviews(existsReviews);
-                        alert('order cancelled successfully');
+                        alert('review removed successfully');
                     }
                 })
         }
@@ -84,8 +83,7 @@ const MyReviews = () => {
 
                             </th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Service</th>
                             <th>Message</th>
                         </tr>
                     </thead>

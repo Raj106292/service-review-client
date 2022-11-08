@@ -15,7 +15,7 @@ const UserReview = () => {
         const userName = `${form.firstName.value} ${form.lastName.value}`;
         const ratings = form.ratings.value;
         const email = user?.email || 'Unregistered';
-        const review = form.review.value;
+        const reviewUser = form.review.value;
 
         const userReview = {
             serviceId: _id,
@@ -24,10 +24,10 @@ const UserReview = () => {
             customer: userName,
             email,
             ratings,
-            review,
+            reviewUser,
         };
 
-        fetch('https://localhost:5000/reviews', {
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
                 "content-type": "application/json",
@@ -37,9 +37,8 @@ const UserReview = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.acknowledged) {
-                    alert('Your Order Placed Successfully');
+                    alert('You Successfully Placed a Review');
                     form.reset();
                     navigate('/');
                 }
@@ -63,7 +62,7 @@ const UserReview = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 my-5'>
                     <input name="firstName" required type="text" placeholder="First Name" className="input input-bordered input-info w-full rounded-lg" />
                     <input name="lastName" required type="text" placeholder="Last Name" className="input input-bordered input-info w-full rounded-lg" />
-                    <input name="ratings" required type="number" placeholder="service ratings" className="input input-bordered input-info w-full rounded-lg" />
+                    <input name="ratings" required type="text" placeholder="service ratings" className="input input-bordered input-info w-full rounded-lg" />
                     <input name="email" required type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered input-info w-full rounded-lg font-bold" readOnly />
                 </div>
                 <div>

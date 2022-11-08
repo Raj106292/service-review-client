@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const ReviewInRow = ({review, handleDelete}) => {
-    const { _id, serviceName, price, customer, serviceId, ratings } = review;
+    const { _id, serviceName, price, customer, serviceId, ratings, reviewUser } = review;
     const [reviewService, setReviewService] = useState({});
 
     useEffect(() => {
@@ -24,8 +24,8 @@ const ReviewInRow = ({review, handleDelete}) => {
                     <div className="avatar">
                         <div className="rounded-lg w-24 h-24">
                             {
-                                reviewService?.img &&
-                                <img src={reviewService.img} alt="Avatar Tailwind CSS Component" />
+                                reviewService?.image &&
+                                <img src={reviewService.image} alt="Avatar Tailwind CSS Component" />
                             }
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const ReviewInRow = ({review, handleDelete}) => {
                 <br />
                 <span className="badge badge-ghost badge-sm">${price}</span>
             </td>
-            <td>Purple</td>
+            <td>{reviewUser}</td>
         </tr>
     );
 };
