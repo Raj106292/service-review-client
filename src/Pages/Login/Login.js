@@ -24,6 +24,7 @@ const Login = () => {
         userLogIn(email, password)
             .then((result) => {
                 const user = result.user;
+                console.log(user);
 
                 // get JWT token
                 setAuthToken(user);

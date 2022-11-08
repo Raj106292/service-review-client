@@ -4,8 +4,8 @@ import { SiFacebook } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import logo from '../../assets/login_logo.jpg';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
-import { setAuthToken } from '../../Utilities/Auth/auth';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
+// import { setAuthToken } from '../../Utilities/Auth/auth';
 
 const SignUp = () => {
 
@@ -22,7 +22,7 @@ const SignUp = () => {
         createNewUser(email, password)
             .then((result) => {
                 const user = result.user;
-                setAuthToken(user);
+                // setAuthToken(user);
                 updateUserProfile(name)
                     .then(() => {
                         form.reset();

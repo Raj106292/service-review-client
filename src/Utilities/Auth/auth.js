@@ -3,7 +3,7 @@ export const setAuthToken = (user) => {
         email: user.email
     }
 
-    fetch('https://localhost:5000/jwt', {
+    fetch('http://localhost:5000/jwt', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
@@ -12,6 +12,6 @@ export const setAuthToken = (user) => {
     })
         .then(res => res.json())
         .then(data => {
-            localStorage.setItem('geniusToken', data.token);
+            localStorage.setItem('rdsToken', data.token);
         })
 }

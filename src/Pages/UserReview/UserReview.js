@@ -1,0 +1,78 @@
+// import React, { useContext } from 'react';
+// import { useLoaderData, useNavigate } from 'react-router-dom';
+// import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
+
+// const UserReview = () => {
+
+//     const { _id, name, price, image } = useLoaderData();
+//     const { user } = useContext(AuthContext);
+//     const navigate = useNavigate();
+
+//     const handleReviewSubmit = e => {
+//         e.preventDefault();
+
+//         const form = e.target;
+//         const name = `${form.firstName.value} ${form.lastName.value}`;
+//         const ratings = form.ratings.value;
+//         const email = user?.email || 'Unregistered';
+//         const review = form.review.value;
+
+//         const userReview = {
+//             service: _id,
+//             serviceName: name,
+//             price,
+//             customer: name,
+//             email,
+//             ratings,
+//             review,
+//         };
+
+//         fetch('https://localhost:5000/reviews', {
+//             method: 'POST',
+//             headers: {
+//                 "content-type": "application/json",
+//                 authorization: `Bearer ${localStorage.getItem('rdsToken')}`
+//             },
+//             body: JSON.stringify(userReview)
+//         })
+//             .then(res => res.json())
+//             .then(data => {
+//                 console.log(data);
+//                 if (data.acknowledged) {
+//                     alert('Your Order Placed Successfully');
+//                     form.reset();
+//                     navigate('/');
+//                 }
+//             })
+//             .catch(error => {
+//                 console.log(error.message);
+//             })
+//     }
+
+//     return (
+//         <div>
+//             <div className='relative mt-12 mb-32'>
+//                 <img src={image} alt="" className='w-full h-72 rounded-lg' />
+//                 <div>
+//                     <h2 className='text-4xl font-bold absolute bottom-1/2 left-20 text-black'>Review</h2>
+//                 </div>
+//             </div>
+//             <form onSubmit={handleReviewSubmit} className='bg-base-300 p-24 mb-32 rounded-lg'>
+//                 <h2 className='text-4xl text-blue-500 font-bold'>You are going to review for: {name}</h2>
+//                 <h4 className='text-3xl text-red-600 font-semibold'>Price: ${price}</h4>
+//                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 my-5'>
+//                     <input name="firstName" required type="text" placeholder="First Name" className="input input-bordered input-info w-full rounded-lg" />
+//                     <input name="lastName" required type="text" placeholder="Last Name" className="input input-bordered input-info w-full rounded-lg" />
+//                     <input name="ratings" required type="number" placeholder="service ratings" className="input input-bordered input-info w-full rounded-lg" />
+//                     <input name="email" required type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered input-info w-full rounded-lg font-bold" readOnly />
+//                 </div>
+//                 <div>
+//                     <textarea name="review" className="textarea textarea-success w-full rounded-lg" placeholder="Your Message"></textarea>
+//                 </div>
+//                 <input type="submit" value="submit your review" className='btn w-full bg-orange-600 text-white font-bold rounded-lg my-5' />
+//             </form>
+//         </div>
+//     );
+// };
+
+// export default UserReview;
