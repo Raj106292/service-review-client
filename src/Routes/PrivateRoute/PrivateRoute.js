@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 
 const PrivateRoute = ({ children }) => {
 
@@ -8,11 +8,8 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <div 
-        className="radial-progress bg-primary text-primary-content border-4 border-primary my-24" 
-        style={{ "--value": 60 }}>
-            60%
-        </div>
+        return <div className="radial-progress bg-primary text-primary-content border-4 border-primary my-24" 
+        style={{ "--value": 60 }}>60%</div>
     }
 
     if (user) {

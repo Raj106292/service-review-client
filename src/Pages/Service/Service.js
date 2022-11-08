@@ -1,10 +1,12 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 
 const Service = () => {
 
     const service = useLoaderData();
-    const { name, image, details } = service;
+    const { user } = useContext(AuthContext);
+    const { name, image, details, price, ratings, _id } = service;
     // console.log(name);
 
     return (
@@ -15,7 +17,18 @@ const Service = () => {
                     <div>
                         <h1 className="text-5xl font-bold"> ---[ {name} ]--- </h1>
                         <p className="py-6">{details}</p>
-                        <button className="btn btn-primary">Book Now</button>
+                        <div className='flex justify-between'>
+                            <p className='text-xl text-yellow-500'>Price: {price}</p>
+                            <p className='text-xl text-blue-500'>Ratings: {ratings}</p>
+                        </div>
+                        <div className='flex justify-between'>
+                            <button className="btn btn-primary mt-5">Book Now</button>
+                            {
+                                user?.email ?
+                                <Link to={`/review/${_id}`}><button className="btn btn-info mt-5">Review the service</button></Link> :
+                                <Link to='/login'><button className="btn btn-ghost mt-5">Please Login</button></Link>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
