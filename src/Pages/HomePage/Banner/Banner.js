@@ -11,9 +11,6 @@ const Banner = () => {
         <div className="carousel w-full my-3">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={img1} className="w-full rounded-lg" alt='' />
-                <div className='absolute transform -translate-y-1/2 bottom-0 left-1/3'>
-                    <span className='bg-black text-white px-3 py-2 rounded-lg'>a best click remains your memory for whole life</span>
-                </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide6" className="btn btn-ghost btn-circle">❮</a>
                     <a href="#slide2" className="btn btn-ghost btn-circle">❯</a>
@@ -21,9 +18,6 @@ const Banner = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
                 <img src={img2} className="w-full rounded-lg" alt='' />
-                <div className='absolute transform -translate-y-1/2 bottom-0 left-1/3'>
-                    <span className='bg-black text-white px-3 py-2 rounded-lg'>a best click remains your memory for whole life</span>
-                </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-ghost btn-circle">❮</a>
                     <a href="#slide3" className="btn btn-ghost btn-circle">❯</a>
@@ -31,9 +25,6 @@ const Banner = () => {
             </div>
             <div id="slide3" className="carousel-item relative w-full">
                 <img src={img3} className="w-full rounded-lg" alt='' />
-                <div className='absolute transform -translate-y-1/2 bottom-0 left-1/3'>
-                    <span className='bg-black text-white px-3 py-2 rounded-lg'>a best click remains your memory for whole life</span>
-                </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-ghost btn-circle">❮</a>
                     <a href="#slide4" className="btn btn-ghost btn-circle">❯</a>
@@ -41,9 +32,6 @@ const Banner = () => {
             </div>
             <div id="slide4" className="carousel-item relative w-full">
                 <img src={img4} className="w-full rounded-lg" alt='' />
-                <div className='absolute transform -translate-y-1/2 bottom-0 left-1/3'>
-                    <span className='bg-black text-white px-3 py-2 rounded-lg'>a best click remains your memory for whole life</span>
-                </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-ghost btn-circle">❮</a>
                     <a href="#slide5" className="btn btn-ghost btn-circle">❯</a>
@@ -51,9 +39,6 @@ const Banner = () => {
             </div>
             <div id="slide5" className="carousel-item relative w-full">
                 <img src={img5} className="w-full rounded-lg" alt='' />
-                <div className='absolute transform -translate-y-1/2 bottom-0 left-1/3'>
-                    <span className='bg-black text-white px-3 py-2 rounded-lg'>a best click remains your memory for whole life</span>
-                </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide4" className="btn btn-ghost btn-circle">❮</a>
                     <a href="#slide6" className="btn btn-ghost btn-circle">❯</a>
@@ -61,9 +46,6 @@ const Banner = () => {
             </div>
             <div id="slide6" className="carousel-item relative w-full">
                 <img src={img6} className="w-full rounded-lg" alt='' />
-                <div className='absolute transform -translate-y-1/2 bottom-0 left-1/3'>
-                    <span className='bg-black text-white px-3 py-2 rounded-lg'>a best click remains your memory for whole life</span>
-                </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide5" className="btn btn-ghost btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-ghost btn-circle">❯</a>

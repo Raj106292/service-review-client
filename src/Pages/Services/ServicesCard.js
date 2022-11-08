@@ -8,7 +8,7 @@ const ServicesCard = ({ service }) => {
         <div className="card w-96 glass">
             <figure><img src={image} className='w-full' style={{ height: '250px' }} alt="car!" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Life hack</h2>
+                <h2 className="card-title"> --( <u className='text-3xl text-sky-500'>{name}</u> )-- </h2>
                 <p>
                     {
                         details.length > 150 ?
@@ -17,7 +17,7 @@ const ServicesCard = ({ service }) => {
                     }
                 </p>
                 <div className='flex justify-between'>
-                    <p className='text-xl font-semibold text-cyan-600'>Price: {price}</p>
+                    <p className='text-xl font-semibold text-blue-600'>Price: {price}</p>
                     <p className='text-xl font-semibold text-orange-500'>Ratings: {ratings}</p>
                 </div>
                 <div className="card-actions justify-end">

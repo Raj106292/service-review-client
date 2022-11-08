@@ -15,7 +15,7 @@ const LimitedService = () => {
     return (
         <div className='mt-12'>
             <h2 className='text-center text-blue-500 text-4xl mb-6 font-bold'>❯❯❯ Services ❮❮❮</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     services.map(service => <LimitedServiceCard key={service._id} service={service}></LimitedServiceCard>)
                 }
