@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import img from '../../assets/logo.jpg'
 
 const Header = () => {
 
@@ -21,7 +22,10 @@ const Header = () => {
                         {menuItem}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl">RD's Photography</Link>
+                <Link className="btn btn-ghost normal-case text-xl flex items-center gap-2">
+                    <img src={img} style={{height: '40px', width: '40px'}} alt="" />
+                    <p>RD's Photography</p>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

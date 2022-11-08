@@ -3,10 +3,10 @@ import img from '../../../assets/about.jpg';
 
 const AboutPhotography = () => {
     return (
-        <div className='mt-12'>
+        <div className='mt-20'>
             <h2 className='text-4xl font-semibold text-center text-orange-500 mb-5'>❯❯❯ About Photography ❮❮❮</h2>
             <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img src={img} style={{ width: '400px' }} className='rounded-md' alt="Album" /></figure>
+                <figure><img src={img} style={{ width: '500px' }} className='rounded-md' alt="Album" /></figure>
                 <div className="card-body w-full lg:w-1/2">
                     <h2 className="card-title">A photo has lot of meanings</h2>
                     <p>
