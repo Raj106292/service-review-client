@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Footer from '../../Shared/Footer/Footer';
 import ServicesCard from './ServicesCard';
 
 const Services = () => {
@@ -15,6 +16,7 @@ const Services = () => {
                     services.map(service => <ServicesCard key={service._id} service={service}></ServicesCard>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -1,16 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/logo.jpg'
+import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 
 const Header = () => {
 
+    const { user, userLogOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleLogOut = () => {
+        userLogOut()
+            .then(() => {
+                alert('Sign Out Successfully')
+                navigate('/');
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }
+
     const menuItem = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/services'>Services</Link></li>
-        <li><Link>Login</Link></li>
-        <li><Link>My Reviews</Link></li>
-        <li><Link>Add Services</Link></li>
-        <li><Link>Log Out</Link></li>
+        <li className='font-semibold'><Link to='/'>Home</Link></li>
+        <li className='font-semibold'><Link to='/services'>Services</Link></li>
+        {
+            user?.email ?
+                <>
+                    <li className='font-semibold'><Link to='/'>My Reviews</Link></li>
+                    <li className='font-semibold'><Link to='/'>Add Services</Link></li>
+                    <li className='font-semibold'><button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button></li>
+                </> :
+                <li className='font-semibold'><Link to='/login'>Login</Link></li>
+        }
     </>
 
     return (
@@ -25,7 +45,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link className="btn btn-ghost normal-case text-xl flex items-center gap-2">
-                    <img src={img} style={{height: '40px', width: '40px'}} alt="" />
+                    <img src={img} style={{ height: '40px', width: '40px' }} alt="" />
                     <p>RD's Photography</p>
                 </Link>
             </div>
