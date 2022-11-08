@@ -5,7 +5,7 @@ const Header = () => {
 
     const menuItem = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link>About</Link></li>
+        <li><Link to='/services'>Services</Link></li>
         <li><Link>Login</Link></li>
         <li><Link>Add Services</Link></li>
     </>
@@ -21,7 +21,7 @@ const Header = () => {
                         {menuItem}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                <Link className="btn btn-ghost normal-case text-xl">RD's Photography</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -29,7 +29,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/' className="btn">Get started</Link>
+                <Link to='/' className="btn">Blog</Link>
             </div>
         </div>
     );
