@@ -28,7 +28,6 @@ const SocialLogin = () => {
 
     return (
         <div>
-            <p className='text-center'>Social Login</p>
             <p className='text-center'>
                 <button onClick={handleGoogleLogIn} className='btn btn-ghost'><FaGoogle></FaGoogle></button>
             </p>

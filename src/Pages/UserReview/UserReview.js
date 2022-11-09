@@ -40,7 +40,7 @@ const UserReview = () => {
                 if (data.acknowledged) {
                     alert('You Successfully Placed a Review');
                     form.reset();
-                    navigate('/');
+                    navigate('/services');
                 }
             })
             .catch(error => {

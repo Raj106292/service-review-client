@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SiFacebook } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
 import logo from '../../assets/login_logo.jpg';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 import { setAuthToken } from '../../Utilities/Auth/auth';
@@ -67,11 +65,7 @@ const Login = () => {
                         </div>
                     </form>
                     <div className='text-center'>
-                        <p>Or Sign-in with</p>
-                        <div className='flex justify-center text-2xl gap-5 my-4'>
-                            <SiFacebook></SiFacebook>
-                            <FaLinkedin></FaLinkedin>
-                        </div>
+                        <p>or Sign-in with</p>
                         <div>
                             <SocialLogin></SocialLogin>
                         </div>
