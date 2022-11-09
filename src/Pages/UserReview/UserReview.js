@@ -14,6 +14,7 @@ const UserReview = () => {
         const form = e.target;
         const userName = `${form.firstName.value} ${form.lastName.value}`;
         const ratings = form.ratings.value;
+        const photoURL = form.photoURL.value;
         const email = user?.email || 'Unregistered';
         const reviewUser = form.review.value;
 
@@ -25,6 +26,7 @@ const UserReview = () => {
             email,
             ratings,
             reviewUser,
+            photoURL,
         };
 
         fetch('http://localhost:5000/reviews', {
@@ -66,6 +68,7 @@ const UserReview = () => {
                     <input name="email" required type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered input-info w-full rounded-lg font-bold" readOnly />
                 </div>
                 <div>
+                    <input name="photoURL" type="text" placeholder="your phot url" defaultValue={user?.photoURL} className="input input-bordered input-info w-full rounded-lg font-bold" />
                     <textarea name="review" className="textarea textarea-success w-full rounded-lg" placeholder="Your Review"></textarea>
                 </div>
                 <input type="submit" value="submit your review" className='btn w-full bg-orange-600 text-white font-bold rounded-lg my-5' />

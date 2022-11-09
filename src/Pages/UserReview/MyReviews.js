@@ -57,7 +57,7 @@ const MyReviews = () => {
 
     const handleUpdateReview = (id, review) => {
         fetch(`http://localhost:5000/reviews/${id}`, {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 "content-type": "application/json",
                 authorization: `Bearer ${localStorage.getItem('rdsToken')}`

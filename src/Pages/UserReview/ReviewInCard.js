@@ -38,8 +38,8 @@ const ReviewInCard = ({ review, handleDelete, handleUpdate }) => {
                 <div className="card-actions justify-between">
                     <label htmlFor="my-modal-6" className="btn btn-primary">Update Review</label>
                     <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-                    <div className="modal modal-bottom sm:modal-middle">
-                        <div className="modal-box">
+                    <div className="modal">
+                        <div className="modal-box bg-slate-200">
                             <h3 className="font-bold text-lg text-black">Update your review on {serviceName}:</h3>
                             <form onSubmit={handleUpdate}>
                                 <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100 mt-5">

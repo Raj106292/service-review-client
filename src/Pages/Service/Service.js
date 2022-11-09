@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
+import Reviews from './Reviews/Reviews';
 
 const Service = () => {
 
@@ -32,6 +33,7 @@ const Service = () => {
                     </div>
                 </div>
             </div>
+            <Reviews name={name}></Reviews>
         </div>
     );
 };
