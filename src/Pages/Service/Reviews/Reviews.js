@@ -13,7 +13,7 @@ const Reviews = (name) => {
             })
     }, [serviceName]);
 
-    console.log(reviews);
+    // console.log(reviews);
 
     return (
         <div className='mt-12'>

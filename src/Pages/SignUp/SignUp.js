@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/login_logo.jpg';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 // import { setAuthToken } from '../../Utilities/Auth/auth';
 
 const SignUp = () => {
@@ -24,7 +25,9 @@ const SignUp = () => {
                 updateUserProfile(name)
                     .then(() => {
                         form.reset();
-                        alert('Sign Up Successful')
+                        Swal.fire(
+                            'Sign Up Successful',
+                        )
                     })
                     .catch((error) => {
                         console.log(error.message);

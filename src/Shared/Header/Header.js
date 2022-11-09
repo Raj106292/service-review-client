@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/logo.jpg'
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Header = () => {
 
@@ -11,7 +12,9 @@ const Header = () => {
     const handleLogOut = () => {
         userLogOut()
             .then(() => {
-                alert('Sign Out Successfully')
+                Swal.fire(
+                    'Sign Out Successfully',
+                )
                 navigate('/');
             })
             .catch((error) => {
@@ -26,7 +29,7 @@ const Header = () => {
             user?.email ?
                 <>
                     <li className='font-semibold'><Link to='/myReview'>My Reviews</Link></li>
-                    <li className='font-semibold'><Link to='/'>Add Services</Link></li>
+                    <li className='font-semibold'><Link to='/addService'>Add Services</Link></li>
                     <li className='font-semibold'><button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button></li>
                 </> :
                 <li className='font-semibold'><Link to='/login'>Login</Link></li>
@@ -55,7 +58,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/' className="btn">Blog</Link>
+                <Link to='/blog' className="btn">Blog</Link>
             </div>
         </div>
     );

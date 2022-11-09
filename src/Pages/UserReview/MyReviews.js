@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 import ReviewInCard from './ReviewInCard';
+import Swal from 'sweetalert2';
 
 const MyReviews = () => {
-    const { user, userLogOut } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
@@ -13,9 +14,6 @@ const MyReviews = () => {
             }
         })
             .then(res => {
-                // if (res.status === 401 || res.status === 403) {
-                //     return userLogOut()
-                // }
                 return res.json();
             })
             .then(data => {
@@ -40,7 +38,9 @@ const MyReviews = () => {
                     if (data.deletedCount > 0) {
                         const existsReviews = reviews.filter(review => review._id !== id);
                         setReviews(existsReviews);
-                        alert('review removed successfully');
+                        Swal.fire(
+                            'Review Successfully Removed',
+                        )
                     }
                 })
         }

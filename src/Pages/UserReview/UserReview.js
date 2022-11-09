@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const UserReview = () => {
 
@@ -40,7 +41,9 @@ const UserReview = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert('You Successfully Placed a Review');
+                    Swal.fire(
+                        'You Successfully Placed a Review',
+                    )
                     form.reset();
                     navigate('/services');
                 }
@@ -68,7 +71,7 @@ const UserReview = () => {
                     <input name="email" required type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered input-info w-full rounded-lg font-bold" readOnly />
                 </div>
                 <div>
-                    <input name="photoURL" type="text" placeholder="your phot url" defaultValue={user?.photoURL} className="input input-bordered input-info w-full rounded-lg font-bold" />
+                    <input name="photoURL" type="text" placeholder="your phot url" defaultValue={user?.photoURL} className="input input-bordered input-info w-full rounded-lg font-bold mb-5" />
                     <textarea name="review" className="textarea textarea-success w-full rounded-lg" placeholder="Your Review"></textarea>
                 </div>
                 <input type="submit" value="submit your review" className='btn w-full bg-orange-600 text-white font-bold rounded-lg my-5' />
