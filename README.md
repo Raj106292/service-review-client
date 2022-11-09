@@ -35,7 +35,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Working of assignment - 11
 
-live link: 
+live link: https://wedding-photographer-review.web.app
 
 in this assignment i am working with mongodb, jwt basically a full stack assignment
 
