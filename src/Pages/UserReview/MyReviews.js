@@ -11,7 +11,7 @@ const MyReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+        fetch(`https://service-review-server-side-pi.vercel.app/reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('rdsToken')}`
             }
@@ -30,7 +30,7 @@ const MyReviews = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to remove the review');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://service-review-server-side-pi.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('rdsToken')}`
@@ -59,7 +59,7 @@ const MyReviews = () => {
     }
 
     const handleUpdateReview = (id, review) => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://service-review-server-side-pi.vercel.app/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 "content-type": "application/json",
