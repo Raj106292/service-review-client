@@ -33,6 +33,19 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+Working of assignment - 11
+
+live link: 
+
+in this assignment i am working with mongodb, jwt basically a full stack assignment
+
+on this assignment, i am working in both server side and client side. on the server side faced a lot of errors which helps me to understand the functionality
+
+on the server side i made a few api by using crud method and insert, update, find, delete process. i have to make more practice in the backend section specially update a document section
+
+on the client i tried to full fill all the requirements. but this assignment is not so easy for me.
+
+update the review suffers me a lot and it's really tough to me to update review section
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
