@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../Hooks/UseTitle';
+import Footer from '../../Shared/Footer/Footer';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 import Reviews from './Reviews/Reviews';
 
 const Service = () => {
 
+    useTitle('services');
     const service = useLoaderData();
     const { user } = useContext(AuthContext);
     const { name, image, details, price, ratings, _id } = service;
@@ -34,6 +37,7 @@ const Service = () => {
                 </div>
             </div>
             <Reviews name={name}></Reviews>
+            <Footer></Footer>
         </div>
     );
 };

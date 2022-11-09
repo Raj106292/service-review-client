@@ -17,18 +17,11 @@ const Reviews = (name) => {
 
     return (
         <div className='mt-12'>
-            {
-                reviews.length === 0 ?
-                    <div>
-                        <h1 className='text-xl font-semibold text-center text-orange-500'>This Service Has No Review Yet</h1>
-                    </div>
-                    :
-                    <div className='grid grid-cols-1 gap-5'>
-                        {
-                            reviews.map(review => <ReviewsCard key={review._id} review={review}></ReviewsCard>)
-                        }
-                    </div>
-            }
+            <div className='grid grid-cols-1 gap-5'>
+                {
+                    reviews.map(review => <ReviewsCard key={review._id} review={review}></ReviewsCard>)
+                }
+            </div>
         </div>
     );
 };

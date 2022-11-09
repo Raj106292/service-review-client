@@ -4,10 +4,12 @@ import logo from '../../assets/login_logo.jpg';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/UseTitle';
 // import { setAuthToken } from '../../Utilities/Auth/auth';
 
 const SignUp = () => {
 
+    useTitle('Sign Up')
     const { createNewUser, updateUserProfile } = useContext(AuthContext);
 
     const handSignUp = e => {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviewsCard = ({ review }) => {
 
-    const { customer, email, ratings, reviewUser, photoURL } = review
+    const { customer, ratings, reviewUser, photoURL } = review
 
     return (
         <div className="card w-full bg-info text-primary-content">

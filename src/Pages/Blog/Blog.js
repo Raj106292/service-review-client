@@ -1,6 +1,11 @@
 import React from 'react';
+import useTitle from '../../Hooks/UseTitle';
+import Footer from '../../Shared/Footer/Footer';
 
 const Blog = () => {
+
+    useTitle('Blog');
+
     return (
         <div>
             <div className="mockup-window border border-base-300 p-2 mt-5">
@@ -72,6 +77,7 @@ const Blog = () => {
                     </p>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

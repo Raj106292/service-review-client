@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/UseTitle';
 
 const AddService = () => {
 
+    useTitle('New Service');
     const navigate = useNavigate();
 
     const handleNewService = e => {

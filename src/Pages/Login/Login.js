@@ -4,9 +4,11 @@ import logo from '../../assets/login_logo.jpg';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 import { setAuthToken } from '../../Utilities/Auth/auth';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import useTitle from '../../Hooks/UseTitle';
 
 const Login = () => {
 
+    useTitle('Login')
     const { userLogIn } = useContext(AuthContext);
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';

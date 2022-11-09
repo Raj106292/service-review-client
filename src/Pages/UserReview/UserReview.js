@@ -2,9 +2,12 @@ import React, { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Utilities/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/UseTitle';
+import Footer from '../../Shared/Footer/Footer';
 
 const UserReview = () => {
 
+    useTitle('Give Review');
     const { _id, name, price, image } = useLoaderData();
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -76,6 +79,7 @@ const UserReview = () => {
                 </div>
                 <input type="submit" value="submit your review" className='btn w-full bg-orange-600 text-white font-bold rounded-lg my-5' />
             </form>
+            <Footer></Footer>
         </div>
     );
 };
