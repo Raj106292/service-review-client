@@ -29,10 +29,12 @@ const Header = () => {
             user?.email ?
                 <>
                     <li className='font-semibold'><Link to='/myReview'>My Reviews</Link></li>
-                    <li className='font-semibold'><Link to='/addService'>Add Services</Link></li>
                     <li className='font-semibold'><button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button></li>
                 </> :
                 <li className='font-semibold'><Link to='/login'>Login</Link></li>
+        }
+        {
+            user?.status === 'admin' && <li className='font-semibold'><Link to='/addService'>Add Services</Link></li>
         }
     </>
 
