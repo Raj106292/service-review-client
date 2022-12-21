@@ -9,6 +9,7 @@ body {
   font-family: 'Signika Negative', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
